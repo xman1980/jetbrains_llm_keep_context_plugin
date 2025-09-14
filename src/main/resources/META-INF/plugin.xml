@@ -1,0 +1,91 @@
+<idea-plugin>
+    <id>com.yourcompany.llm-chat-history</id>
+    <name>LLM Chat History</name>
+    <version>1.0.0</version>
+    <vendor email="support@yourcompany.com" url="https://github.com/yourcompany/pycharm-llm-context-plugin">Your Company</vendor>
+
+    <description><![CDATA[
+        <h2>LLM Chat History Plugin</h2>
+        <p>Automatically saves LLM chat history (prompts + responses) to your project directory as markdown or JSON.</p>
+
+        <h3>Features:</h3>
+        <ul>
+            <li>Automatic saving of LLM conversations to project directory</li>
+            <li>View and search past chat sessions</li>
+            <li>Quick insertion of previous context into new prompts</li>
+            <li>Support for both markdown and JSON formats</li>
+            <li>Lightweight and optimized for performance</li>
+            <li>Compatible with remote development environments</li>
+        </ul>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <h3>Version 1.0.0</h3>
+        <ul>
+            <li>Initial release</li>
+            <li>Basic chat history saving and viewing</li>
+            <li>Search functionality</li>
+            <li>Context insertion feature</li>
+        </ul>
+    ]]></change-notes>
+
+    <!-- Compatibility -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.python</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Tool Window -->
+        <toolWindow id="LLMChatHistory"
+                    icon="/icons/toolwindow.svg"
+                    anchor="right"
+                    factoryClass="com.yourcompany.llmchat.ui.ChatHistoryToolWindowFactory"/>
+
+        <!-- Application Services -->
+        <applicationService serviceInterface="com.yourcompany.llmchat.settings.LLMChatSettings"
+                          serviceImplementation="com.yourcompany.llmchat.settings.LLMChatSettings"/>
+
+        <!-- Project Services -->
+        <projectService serviceInterface="com.yourcompany.llmchat.service.ChatHistoryService"
+                       serviceImplementation="com.yourcompany.llmchat.service.ChatHistoryService"/>
+
+        <!-- Settings -->
+        <applicationConfigurable parentId="tools"
+                               instance="com.yourcompany.llmchat.settings.LLMChatConfigurable"
+                               id="com.yourcompany.llmchat.settings"
+                               displayName="LLM Chat History"/>
+    </extensions>
+
+    <actions>
+        <!-- Main menu actions -->
+        <group id="LLMChatHistory.MainMenu" text="LLM Chat History" description="LLM Chat History Actions">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+
+            <action id="LLMChatHistory.SaveChat"
+                    class="com.yourcompany.llmchat.actions.SaveChatAction"
+                    text="Save Selected Text as Chat"
+                    description="Save selected text to chat history"/>
+
+            <action id="LLMChatHistory.OpenHistory"
+                    class="com.yourcompany.llmchat.actions.OpenHistoryAction"
+                    text="Open Chat History"
+                    description="Open the chat history tool window"/>
+        </group>
+
+        <!-- Context menu actions -->
+        <action id="LLMChatHistory.SaveChatContext"
+                class="com.yourcompany.llmchat.actions.SaveChatAction"
+                text="Save as LLM Chat"
+                description="Save selected text to LLM chat history">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift S"/>
+        </action>
+
+        <action id="LLMChatHistory.InsertContext"
+                class="com.yourcompany.llmchat.actions.InsertContextAction"
+                text="Insert Chat Context"
+                description="Insert previous chat entry as context">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift I"/>
+        </action>
+    </actions>
+</idea-plugin>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <rect width="16" height="16" fill="#59A869" rx="2"/>
+  <path d="M3 4h10v1H3V4zm0 3h10v1H3V7zm0 3h7v1H3v-1z" fill="white"/>
+  <circle cx="12" cy="11" r="2" fill="#FFD700"/>
+  <text x="12" y="12.5" text-anchor="middle" fill="black" font-size="7" font-weight="bold">AI</text>
+</svg>

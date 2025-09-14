@@ -1,0 +1,31 @@
+# IDE files
+.idea/
+*.iml
+
+# Build artifacts
+build/
+out/
+
+# Gradle
+.gradle/
+gradle-app.setting
+
+# Plugin development
+/sandbox/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log
+
+# Chat history (for testing)
+.llm-chat-history/
+
+# Local configuration
+local.properties
