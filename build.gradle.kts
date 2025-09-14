@@ -4,7 +4,7 @@ plugins {
     id("org.jetbrains.intellij.platform") version "2.3.0"
 }
 
-group = "com.yourcompany"
+group = "com.vitalizasimovich"
 version = "1.0.0"
 
 repositories {
@@ -17,7 +17,6 @@ repositories {
 dependencies {
     intellijPlatform {
         pycharmCommunity("2024.3.6")
-        testFramework(TestFrameworkType.Platform)
         pluginVerifier()
     }
 
@@ -48,8 +47,26 @@ intellijPlatform {
     }
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
+
 tasks {
     test {
         useJUnitPlatform()
+    }
+
+    compileKotlin {
+        kotlinOptions {
+            jvmTarget = "21"
+        }
+    }
+
+    compileTestKotlin {
+        kotlinOptions {
+            jvmTarget = "21"
+        }
     }
 }

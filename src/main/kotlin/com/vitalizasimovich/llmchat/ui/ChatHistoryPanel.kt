@@ -1,4 +1,4 @@
-package com.yourcompany.llmchat.ui
+package com.vitalizasimovich.llmchat.ui
 
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.actionSystem.*
@@ -8,9 +8,9 @@ import com.intellij.openapi.ui.SimpleToolWindowPanel
 import com.intellij.ui.ScrollPaneFactory
 import com.intellij.ui.components.JBTextField
 import com.intellij.ui.treeStructure.Tree
-import com.yourcompany.llmchat.model.ChatEntry
-import com.yourcompany.llmchat.model.ChatSession
-import com.yourcompany.llmchat.service.ChatHistoryService
+import com.vitalizasimovich.llmchat.model.ChatEntry
+import com.vitalizasimovich.llmchat.model.ChatSession
+import com.vitalizasimovich.llmchat.service.ChatHistoryService
 import java.awt.BorderLayout
 import java.awt.event.KeyAdapter
 import java.awt.event.KeyEvent
@@ -267,7 +267,7 @@ class ChatHistoryPanel(private val project: Project) : SimpleToolWindowPanel(tru
         }
     }
 
-    fun getContent(): JComponent = this
+    override fun getContent(): JComponent = this
 
     // Action classes
     inner class RefreshAction : AnAction("Refresh", "Refresh chat history", AllIcons.Actions.Refresh) {

@@ -1,7 +1,7 @@
-package com.yourcompany.llmchat.settings
+package com.vitalizasimovich.llmchat.settings
 
 import com.intellij.openapi.options.Configurable
-import com.yourcompany.llmchat.model.ExportFormat
+import com.vitalizasimovich.llmchat.model.ExportFormat
 import javax.swing.*
 
 class LLMChatConfigurable : Configurable {

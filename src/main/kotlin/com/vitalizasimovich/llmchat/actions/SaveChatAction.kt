@@ -1,4 +1,4 @@
-package com.yourcompany.llmchat.actions
+package com.vitalizasimovich.llmchat.actions
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
@@ -11,11 +11,11 @@ import com.intellij.openapi.ui.Messages
 import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.psi.PsiDocumentManager
 import com.intellij.psi.PsiFile
-import com.yourcompany.llmchat.model.ChatEntry
-import com.yourcompany.llmchat.model.ChatMetadata
-import com.yourcompany.llmchat.model.ChatType
-import com.yourcompany.llmchat.service.ChatHistoryService
-import com.yourcompany.llmchat.settings.LLMChatSettings
+import com.vitalizasimovich.llmchat.model.ChatEntry
+import com.vitalizasimovich.llmchat.model.ChatMetadata
+import com.vitalizasimovich.llmchat.model.ChatType
+import com.vitalizasimovich.llmchat.service.ChatHistoryService
+import com.vitalizasimovich.llmchat.settings.LLMChatSettings
 
 class SaveChatAction : AnAction("Save as LLM Chat", "Save selected text to LLM chat history", null) {
 

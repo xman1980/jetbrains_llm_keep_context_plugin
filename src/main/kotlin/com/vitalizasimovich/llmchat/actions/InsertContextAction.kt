@@ -1,4 +1,4 @@
-package com.yourcompany.llmchat.actions
+package com.vitalizasimovich.llmchat.actions
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
@@ -8,8 +8,8 @@ import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.popup.JBPopupFactory
 import com.intellij.ui.components.JBList
-import com.yourcompany.llmchat.model.ChatEntry
-import com.yourcompany.llmchat.service.ChatHistoryService
+import com.vitalizasimovich.llmchat.model.ChatEntry
+import com.vitalizasimovich.llmchat.service.ChatHistoryService
 import javax.swing.DefaultListModel
 import javax.swing.ListSelectionModel
 
@@ -119,10 +119,10 @@ class InsertContextAction : AnAction("Insert Chat Context", "Insert selected cha
             if (value is ChatEntryListItem) {
                 val entry = value.entry
                 val typeIcon = when (entry.type) {
-                    com.yourcompany.llmchat.model.ChatType.PROMPT -> "?"
-                    com.yourcompany.llmchat.model.ChatType.RESPONSE -> "✓"
-                    com.yourcompany.llmchat.model.ChatType.CONTEXT -> "📄"
-                    com.yourcompany.llmchat.model.ChatType.SYSTEM -> "⚙"
+                    com.vitalizasimovich.llmchat.model.ChatType.PROMPT -> "?"
+                    com.vitalizasimovich.llmchat.model.ChatType.RESPONSE -> "✓"
+                    com.vitalizasimovich.llmchat.model.ChatType.CONTEXT -> "📄"
+                    com.vitalizasimovich.llmchat.model.ChatType.SYSTEM -> "⚙"
                     else -> "💬"
                 }
 

@@ -1,7 +1,7 @@
-package com.yourcompany.llmchat
+package com.vitalizasimovich.llmchat
 
-import com.yourcompany.llmchat.model.ChatEntry
-import com.yourcompany.llmchat.model.ChatType
+import com.vitalizasimovich.llmchat.model.ChatEntry
+import com.vitalizasimovich.llmchat.model.ChatType
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
 import java.io.File

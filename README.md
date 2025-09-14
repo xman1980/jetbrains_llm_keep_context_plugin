@@ -1,6 +1,9 @@
-do# PyCharm LLM Chat History Plugin
+# JetBrains LLM Keep Context Plugin
 
-A lightweight PyCharm plugin that automatically saves LLM chat history (prompts + responses) to your project directory as markdown or JSON. Features viewing, searching past sessions, and quick insertion of previous context into new prompts.
+A lightweight JetBrains IDE plugin that automatically saves LLM chat history (prompts + responses) to your project directory as markdown or JSON. Features viewing, searching past sessions, and quick insertion of previous context into new prompts.
+
+**Author:** Vitali Zasimovich
+**Repository:** https://github.com/xman1980/jetbrains_llm_keep_context_plugin
 
 ## Features
 
@@ -14,6 +17,12 @@ A lightweight PyCharm plugin that automatically saves LLM chat history (prompts 
 - **Open Source**: MIT licensed and extensible
 
 ## Installation
+
+### From Release
+
+1. Download the latest release from [GitHub Releases](https://github.com/xman1980/jetbrains_llm_keep_context_plugin/releases)
+2. In your JetBrains IDE: **File > Settings > Plugins > Install Plugin from Disk**
+3. Select the downloaded `.zip` file
 
 ### From Source
 
@@ -166,7 +175,7 @@ def example_function():
 ### Project Structure
 
 ```
-src/main/kotlin/com/yourcompany/llmchat/
+src/main/kotlin/com/vitalizasimovich/llmchat/
 ├── actions/           # Editor actions (save, insert)
 ├── model/            # Data models and serialization
 ├── service/          # Chat history service

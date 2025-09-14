@@ -12,6 +12,7 @@ gradle-app.setting
 
 # Plugin development
 /sandbox/
+.intellijPlatform
 
 # OS files
 .DS_Store

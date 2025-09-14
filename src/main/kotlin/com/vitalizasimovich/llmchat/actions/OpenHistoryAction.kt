@@ -1,4 +1,4 @@
-package com.yourcompany.llmchat.actions
+package com.vitalizasimovich.llmchat.actions
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent

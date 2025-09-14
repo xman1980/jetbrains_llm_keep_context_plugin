@@ -1,4 +1,4 @@
-package com.yourcompany.llmchat.model
+package com.vitalizasimovich.llmchat.model
 
 import java.time.Instant
 import java.util.*
@@ -35,14 +35,14 @@ data class ChatSession(
     val title: String,
     val entries: MutableList<ChatEntry> = mutableListOf(),
     val createdAt: Long = System.currentTimeMillis(),
-    val updatedAt: Long = System.currentTimeMillis(),
+    var updatedAt: Long = System.currentTimeMillis(),
     val tags: List<String> = emptyList()
 )
 
 data class ChatHistory(
     val sessions: MutableList<ChatSession> = mutableListOf(),
     val version: Int = 1,
-    val metadata: HistoryMetadata = HistoryMetadata()
+    var metadata: HistoryMetadata = HistoryMetadata()
 )
 
 data class HistoryMetadata(

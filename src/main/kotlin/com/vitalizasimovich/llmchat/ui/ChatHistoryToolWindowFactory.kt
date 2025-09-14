@@ -1,4 +1,4 @@
-package com.yourcompany.llmchat.ui
+package com.vitalizasimovich.llmchat.ui
 
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindow

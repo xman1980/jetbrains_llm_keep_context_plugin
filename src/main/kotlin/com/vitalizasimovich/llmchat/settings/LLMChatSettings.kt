@@ -1,8 +1,8 @@
-package com.yourcompany.llmchat.settings
+package com.vitalizasimovich.llmchat.settings
 
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.components.*
-import com.yourcompany.llmchat.model.ExportFormat
+import com.vitalizasimovich.llmchat.model.ExportFormat
 
 @Service(Service.Level.APP)
 @State(

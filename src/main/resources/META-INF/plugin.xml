@@ -1,8 +1,8 @@
 <idea-plugin>
-    <id>com.yourcompany.llm-chat-history</id>
+    <id>com.vitalizasimovich.llm-chat-history</id>
     <name>LLM Chat History</name>
     <version>1.0.0</version>
-    <vendor email="support@yourcompany.com" url="https://github.com/yourcompany/pycharm-llm-context-plugin">Your Company</vendor>
+    <vendor email="vitali.zasimovich@gmail.com" url="https://github.com/xman1980/jetbrains_llm_keep_context_plugin">Vitali Zasimovich</vendor>
 
     <description><![CDATA[
         <h2>LLM Chat History Plugin</h2>
@@ -31,27 +31,26 @@
 
     <!-- Compatibility -->
     <depends>com.intellij.modules.platform</depends>
-    <depends>com.intellij.modules.python</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Tool Window -->
         <toolWindow id="LLMChatHistory"
                     icon="/icons/toolwindow.svg"
                     anchor="right"
-                    factoryClass="com.yourcompany.llmchat.ui.ChatHistoryToolWindowFactory"/>
+                    factoryClass="com.vitalizasimovich.llmchat.ui.ChatHistoryToolWindowFactory"/>
 
         <!-- Application Services -->
-        <applicationService serviceInterface="com.yourcompany.llmchat.settings.LLMChatSettings"
-                          serviceImplementation="com.yourcompany.llmchat.settings.LLMChatSettings"/>
+        <applicationService serviceInterface="com.vitalizasimovich.llmchat.settings.LLMChatSettings"
+                          serviceImplementation="com.vitalizasimovich.llmchat.settings.LLMChatSettings"/>
 
         <!-- Project Services -->
-        <projectService serviceInterface="com.yourcompany.llmchat.service.ChatHistoryService"
-                       serviceImplementation="com.yourcompany.llmchat.service.ChatHistoryService"/>
+        <projectService serviceInterface="com.vitalizasimovich.llmchat.service.ChatHistoryService"
+                       serviceImplementation="com.vitalizasimovich.llmchat.service.ChatHistoryService"/>
 
         <!-- Settings -->
         <applicationConfigurable parentId="tools"
-                               instance="com.yourcompany.llmchat.settings.LLMChatConfigurable"
-                               id="com.yourcompany.llmchat.settings"
+                               instance="com.vitalizasimovich.llmchat.settings.LLMChatConfigurable"
+                               id="com.vitalizasimovich.llmchat.settings"
                                displayName="LLM Chat History"/>
     </extensions>
 
@@ -61,19 +60,19 @@
             <add-to-group group-id="ToolsMenu" anchor="last"/>
 
             <action id="LLMChatHistory.SaveChat"
-                    class="com.yourcompany.llmchat.actions.SaveChatAction"
+                    class="com.vitalizasimovich.llmchat.actions.SaveChatAction"
                     text="Save Selected Text as Chat"
                     description="Save selected text to chat history"/>
 
             <action id="LLMChatHistory.OpenHistory"
-                    class="com.yourcompany.llmchat.actions.OpenHistoryAction"
+                    class="com.vitalizasimovich.llmchat.actions.OpenHistoryAction"
                     text="Open Chat History"
                     description="Open the chat history tool window"/>
         </group>
 
         <!-- Context menu actions -->
         <action id="LLMChatHistory.SaveChatContext"
-                class="com.yourcompany.llmchat.actions.SaveChatAction"
+                class="com.vitalizasimovich.llmchat.actions.SaveChatAction"
                 text="Save as LLM Chat"
                 description="Save selected text to LLM chat history">
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
@@ -81,7 +80,7 @@
         </action>
 
         <action id="LLMChatHistory.InsertContext"
-                class="com.yourcompany.llmchat.actions.InsertContextAction"
+                class="com.vitalizasimovich.llmchat.actions.InsertContextAction"
                 text="Insert Chat Context"
                 description="Insert previous chat entry as context">
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>

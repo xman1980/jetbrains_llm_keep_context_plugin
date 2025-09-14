@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "pycharm-llm-chat-history"
+rootProject.name = "jetbrains-llm-chat-history"

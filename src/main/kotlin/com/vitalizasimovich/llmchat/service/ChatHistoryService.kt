@@ -1,12 +1,12 @@
-package com.yourcompany.llmchat.service
+package com.vitalizasimovich.llmchat.service
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.diagnostic.Logger
 import com.intellij.openapi.project.Project
-import com.yourcompany.llmchat.model.*
-import com.yourcompany.llmchat.settings.LLMChatSettings
+import com.vitalizasimovich.llmchat.model.*
+import com.vitalizasimovich.llmchat.settings.LLMChatSettings
 import java.io.IOException
 import java.nio.charset.StandardCharsets
 import java.nio.file.Files
